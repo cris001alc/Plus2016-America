@@ -58,6 +58,10 @@ a {
 	color: #22BCE0;
 }
 
+aside {
+	display: none;
+}
+
 body {
 	background: #EEEEEE;
 	font-family: "Open Sans";
@@ -118,10 +122,24 @@ header #avatar img {
 	border-radius: 50%;
 }
 
-header #logo img {
+header #logo {
+	/*-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);*/
 	border-right: 1px solid white;
 	margin-right: 0.5em;
+}
+
+header #logo img {
+	margin-right: 0.5em;
 	padding-right: 0.5em;
+	width: 52px;
+	-webkit-transition: 0.5s;
+}
+
+header #logo img:hover {
+	-webkit-transform: rotate(360deg);
 }
 
 nav {
@@ -149,9 +167,19 @@ nav ul #publicar_nav a {
 	border-radius: 5px;
 	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
 	font-style: italic;
-	padding: 0.8em 0.5em;
+	padding: 0.8em 0.5em 0.8em 2.5em;
 	text-decoration: none;
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
+}
+
+nav ul #publicar_nav a:before {
+	left: 0.5em;
+	position: absolute;
+	top: 0.7em;
+}
+
+nav ul #publicar_nav a:hover:before {
+	font-size: 20px;
 }
 
 nav ul li {
@@ -162,7 +190,12 @@ nav ul li {
 nav ul li a {
 	color: white;
 	display: block;
-	padding: 0.5em 0;
+	padding: 0.5em;
+	-webkit-transition: 0.3s;
+}
+
+nav ul li a:hover {
+	background: #343B54;
 }
 
 #contenido {
@@ -256,6 +289,18 @@ nav ul li a {
 	}
 }
 
+@media screen and (min-width: 1000px) {
+	aside {
+		display: block;
+		float: right;
+		margin: 1em;
+		width: 20%;
+	}
+
+	aside video {
+		width: 100%;
+	}
+}
 
 
 
